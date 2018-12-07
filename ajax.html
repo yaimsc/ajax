@@ -1,0 +1,24 @@
+<html>
+	<head>
+		<meta charset="utf-8">
+		<link href="css/ajax.css?20181201" type="text/css" rel="stylesheet" />
+		<script src="js/ajax.js"></script>
+	</head>
+	<body>
+		<div id="server"><a href="./ajax.zip"><?php echo( $localIPAddress = getHostByName(getHostName()).$_SERVER['SCRIPT_NAME'] ); ?></a></div>
+		<div class="column">
+			<div id="box">
+				<div id="chat" readonly>
+				</div>
+				<label>Usuario: </label><input type="text" id="usr"/><br />
+				<label>Mensaje: </label><input id="msg" autofocus autocomplete="off" onkeydown="aparece()" emoji>
+				<button id="snd" onclick="envia()">Send</button>
+				<div id="emojis">
+					<img src="img/kiss.png" alt="EmojiKiss" id="emoji1" onclick="elige(this)">
+					<img src="img/HuggingFace.png" alt="Hugging" id="emoji2" onclick="elige(this)">
+					<img src="img/thinking.png" alt="Thinking" id="emoji3" onclick="elige(this)">
+				</div>
+		</div>
+		</div>
+	</body>
+</html>

@@ -29,7 +29,7 @@ function envia(str) {
 										for (var i = 0; i < arrChat.length; i++) {
 											var randomColor = '#'+(Math.random()*0xFFFFFF<<0).toString(16);
 											if(arrChat[i][0] == '10.18.124.18'){
-												parrafo = parrafo + "<p style='display:flex;align-self:flex-end;flex-wrap:wrap;'><span style='background-color:" + randomColor + "'>"+arrChat[i][0]+": </span>" + arrChat[i][1]+"</p>";
+												parrafo = parrafo + "<p class='yo' style='display:flex;align-self:flex-end;flex-wrap:wrap;'><span style='background-color:" + randomColor + "'>"+arrChat[i][0]+": </span>" + arrChat[i][1]+"</p>";
 											}else{
 												parrafo = parrafo + "<p><span style='background-color:" + randomColor + "'>"+arrChat[i][0]+": </span>" + arrChat[i][1]+"</p>";
 											}
@@ -40,7 +40,7 @@ function envia(str) {
 				//setTimeout(envia,5000);
             }
         };
-        xmlhttp.open("GET", "http://10.192.4.2/zubiri/ajax_backend.php?q=" + str + "&u=" + usuario,true);
+        xmlhttp.open("GET", "http://10.192.4.56/zubiri/ajax_backend.php?q=" + str + "&u=" + usuario,true);
         xmlhttp.send();
     }
 };

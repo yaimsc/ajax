@@ -27,7 +27,7 @@ a:visited {
 	margin-right: -50%;
 	transform: translate(-50%, -50%);
 	margin: 0;
-	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 1), 0 6px 20px 0 rgba(0, 0, 0, .9);
+	/* box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 1), 0 6px 20px 0 rgba(0, 0, 0, .9); */
 }
 
 #chat {
@@ -88,10 +88,15 @@ span{
 }
 
 #emojis{
-	position: relative;
 	display: flex;
-	justify-content: center;
 	visibility: hidden;
-	margin: 5px;
+	margin: 10px;
 	align-self: center;
+	padding-left: 10%;
+}
+.sombra{
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 1), 0 6px 20px 0 rgba(0, 0, 0, .9);
+}
+.yo{
+	background-color: lightgreen;
 }

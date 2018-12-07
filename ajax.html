@@ -1,13 +1,14 @@
 <html>
 	<head>
 		<meta charset="utf-8">
-		<link href="css/ajax.css?20181201" type="text/css" rel="stylesheet" />
+		<link href="css/ajax.css?20181202" type="text/css" rel="stylesheet" />
 		<script src="js/ajax.js"></script>
 	</head>
 	<body>
 		<div id="server"><a href="./ajax.zip"><?php echo( $localIPAddress = getHostByName(getHostName()).$_SERVER['SCRIPT_NAME'] ); ?></a></div>
-		<div class="column">
 			<div id="box">
+				<div class="column" id="usuarios">
+				</div>
 				<div class="sombra">
 					<div id="chat" readonly>
 					</div>
@@ -16,11 +17,10 @@
 					<button id="snd" onclick="envia()">Send</button>
 				</div>
 				<div id="emojis">
-					<img src="img/kiss.png" alt="EmojiKiss" id="emoji1" onclick="elige(this)">
-					<img src="img/HuggingFace.png" alt="Hugging" id="emoji2" onclick="elige(this)">
-					<img src="img/thinking.png" alt="Thinking" id="emoji3" onclick="elige(this)">
+					<img src="https://clipart.info/images/ccovers/1496184263Kiss-Emoji-png-transparent-Icon-2.png" alt="EmojiKiss" id="emoji1" onclick="elige(this)">
+					<img src="https://cdn.shopify.com/s/files/1/1061/1924/files/Hugging_Face_Emoji_2028ce8b-c213-4d45-94aa-21e1a0842b4d_large.png?15202324258887420558" alt="Hugging" id="emoji2" onclick="elige(this)">
+					<img src="https://cdn.shopify.com/s/files/1/1061/1924/products/Thinking_Face_Emoji_large.png?v=1480481060" alt="Thinking" id="emoji3" onclick="elige(this)">
 				</div>
-			</div>
 		</div>
 	</body>
 </html>

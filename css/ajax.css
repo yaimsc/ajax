@@ -16,8 +16,13 @@ a:visited {
 }
 
 .column{
-	display: flex;
-	flex-direction: column;
+	background: rgba(255, 255, 255, 0.5);
+	width: 180px;
+	height: 400px;
+	display: inline-block;
+	float: left;
+	margin-bottom:10px;
+	border-radius: 10px;
 }
 
 #box {
@@ -27,22 +32,25 @@ a:visited {
 	margin-right: -50%;
 	transform: translate(-50%, -50%);
 	margin: 0;
+	border-radius: 10px;
 	/* box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 1), 0 6px 20px 0 rgba(0, 0, 0, .9); */
 }
 
 #chat {
-	display:block;
+	display:inline-block;
 	width:500px;
 	height:400px;
 	background-color: lightgrey;
 	overflow-x: hidden;
 	overflow-y: auto;
-	border-radius:5px;
+	border-radius:10px;
 	/*background-color: green;
 	background-image: linear-gradient(transparent 50%, rgba(255,255,255,.3) 50%);
 	background-size: 2px 2px;
 	font-family: 'Orbitron', sans-serif;*/
 	font-size:24px;
+	float: right;
+	margin-bottom: 10px;
 }
 
 #chat::-webkit-scrollbar{
@@ -99,4 +107,8 @@ span{
 }
 .yo{
 	background-color: lightgreen;
+}
+input{
+	background: rgba(255, 255, 255, 0.5);
+	border-radius: 20px;
 }

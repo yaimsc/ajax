@@ -26,30 +26,28 @@ function envia(str) {
               chat.innerHTML = this.responseText;
 										var arrChat = JSON.parse(this.responseText);
 										var parrafo;
-										var usuarios = [];
+										var usuarios = {};
 										for (var i = 0; i < arrChat.length; i++) {
 											var randomColor = '#'+(Math.random()*0xFFFFFF<<0).toString(16);
-											if(arrChat[i][0] == '10.18.124.18'){
-												parrafo = parrafo + "<p class='yo' style='display:flex;align-self:flex-end;flex-wrap:wrap;'><span style='background-color:" + randomColor + "'>"+arrChat[i][0]+": </span>" + arrChat[i][1]+"</p>";
-											}else{
-												parrafo = parrafo + "<p><span style='background-color:" + randomColor + "'>"+arrChat[i][0]+": </span>" + arrChat[i][1]+"</p>";
+												parrafo = parrafo + "<p><span style='background-color:"+randomColor+"'>"+arrChat[i][0]+": </span>"+arrChat[i][1]+"</p>";
+												usuarios[arrChat[i][0]] = true;
 											}
-											// usuarios[arrChat[i][0]] = true;
-											// for(var i = 0; i < usuarios.length; i++){
-											// 	usuarios = usuarios + "<p>" + usuarios[i][0] + "</p>";
-											// }
-										}
-										document.getElementById("chat").innerHTML = parrafo;
-										document.getElementById("usuarios").innerHTML = usuarios;
+											for(var key in usuarios){
+												usuarios = usuarios + "<p style='text-align: center;'>" + j + "</p>";
+											}
 
-				chat.scrollTop = chat.scrollHeight;
-				//setTimeout(envia,5000);
+											document.getElementById("chat").innerHTML = parrafo;
+											document.getElementById("usuarios").innerHTML = usuarios;
+
+											chat.scrollTop = chat.scrollHeight;
+											usuarios.scrollTop = usuarios.scrollHeight;
+											//setTimeout(envia,5000);
+										}
             }
         };
-        xmlhttp.open("GET", "http://10.192.4.56/zubiri/ajax_backend.php?q=" + str + "&u=" + usuario,true);
+        xmlhttp.open("GET", "http://10.192.4.1/zubiri/ajax_backend.php?q=" + str + "&u=" + usuario,true);
         xmlhttp.send();
-    }
-};
+    };
 
 function aparece(){
 	document.getElementById("emojis").style.visibility = 'visible';

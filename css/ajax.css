@@ -54,10 +54,15 @@ a:visited {
 }
 
 #chat::-webkit-scrollbar{
-	background-color: purple;
+	background-color: lightgrey;
 	border-radius: 5px;
 	width: 10px;
-	height: 20px;
+}
+
+#chat::-webkit-scrollbar-thumb{
+	background-color: purple;
+	border-radius: 5px;
+	height:10px;
 }
 
 #chat img {
@@ -111,4 +116,21 @@ span{
 input{
 	background: rgba(255, 255, 255, 0.5);
 	border-radius: 20px;
+}
+
+#usuarios{
+	display: inline-block;
+	overflow-x: hidden;
+}
+
+#usuarios::-webkit-scrollbar{
+	background-color: lightgrey;
+	border-radius: 5px;
+	width: 10px;
+}
+
+#usuarios::-webkit-scrollbar-thumb{
+	background-color: purple;
+	border-radius: 5px;
+	height:10px;
 }

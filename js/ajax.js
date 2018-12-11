@@ -26,14 +26,21 @@ function envia(str) {
               chat.innerHTML = this.responseText;
 										var arrChat = JSON.parse(this.responseText);
 										var parrafo;
-										var usuarios = {};
+										var usuarios = new Array();
+										var arrUsu = new Array();
 										for (var i = 0; i < arrChat.length; i++) {
 											var randomColor = '#'+(Math.random()*0xFFFFFF<<0).toString(16);
 												parrafo = parrafo + "<p><span style='background-color:"+randomColor+"'>"+arrChat[i][0]+": </span>"+arrChat[i][1]+"</p>";
 												usuarios[arrChat[i][0]] = true;
 											}
 											for(var key in usuarios){
-												usuarios = usuarios + "<p style='text-align: center;'>" + j + "</p>";
+												arrUsu.push(key);
+												//usuarios = usuarios + "<p style='text-align: center;'>" + key + "</p>";
+											}
+											arrUsu.sort();
+
+											for(var i = 0; i < arrUsu.length; i++){
+												usuarios = usuarios + "<p style='text-align: center;'>" + arrUsu[i] + "</p>";
 											}
 
 											document.getElementById("chat").innerHTML = parrafo;

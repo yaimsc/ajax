@@ -40,6 +40,9 @@ function envia(str) {
 											arrUsu.sort();
 
 											for(var i = 0; i < arrUsu.length; i++){
+												// if(Date.now() - arrChat[i][2] <= 300){
+												//
+												// }
 												usuarios = usuarios + "<p style='text-align: center;'>" + arrUsu[i] + "</p>";
 											}
 
